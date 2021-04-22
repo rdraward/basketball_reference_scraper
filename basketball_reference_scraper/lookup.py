@@ -40,7 +40,7 @@ def lookup(player, ask_matches = True):
                 account for possible misspellings or lingering non-unidecoded 
                 characters.
             """
-            dist = levenshtein(normalized.lower(), line[:-1].lower(), 5)
+            dist = levenshtein(normalized.lower(), line[:-1].lower(), 1)
             if dist >= 0:
                 matches += [(line[:-1], dist)]
 
